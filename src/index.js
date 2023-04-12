@@ -3,11 +3,33 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout';
+import { CreatePlayer } from './pages/CreatePlayer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path='/'
+          element={<Layout />}>
+          <Route
+            index={true}
+            element={<App />}
+          />
+        </Route>
+        <Route
+          path='/CreatePlayer'
+          element={<Layout />}>
+          <Route
+            index={true}
+            element={<CreatePlayer />}
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -4,12 +4,17 @@ import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([]); 
-  const [post,setPost] = useState({
-    title:'',
-    content:''
-}) 
+  const [post, setPost] = useState({
+    charName: '',
+    race: '',
+    strength: '',
+    dexterity: '',
+    constitution: '',
+    intelligence: '',
+    wisdom: '',
+    charisma: '',
+  }); 
 
-const {title, content} = post
 
 useEffect( () =>{
   fetchPosts()
@@ -24,52 +29,66 @@ async function fetchPosts(){
   console.log('data: ',data)
 }
 
-async function createPost(){
-  await supabase 
-  .from('posts')
-  .insert([
-    {title, content}
-  ])
-  .single()
-  setPost({title:"", content:""})
-  fetchPosts()
-}
+// async function createPost(){
+//   await supabase 
+//   .from('posts')
+//   .insert([
+//     {title, content}
+//   ])
+//   .single()
+//   setPost({title:"", content:""})
+//   fetchPosts()
+// }
 
 
 
 
   return (
     <div className='App m-8 '>
-      <div className=' '>
-        <div className=' flex flex-row gap-3  justify-center'>
-          <input
-            className='placeholder:italic placeholder:text-slate-500 block bg-white border-2 border-sky-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-300 focus:ring-green-300 focus:ring-1 sm:text-sm h-10'
-            placeholder='title'
-            value={title}
-            onChange={(e) => setPost({ ...post, title: e.target.value })}
-          />
-          <input
-            className='placeholder:italic placeholder:text-slate-500 block bg-white border-2 border-sky-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-green-300 focus:ring-green-300 focus:ring-1 sm:text-sm h-10 '
-            placeholder='content'
-            value={content}
-            onChange={(e) => setPost({ ...post, content: e.target.value })}
-          />
-          <button
-            className='rounded-lg bg-sky-300 text-slate-900 hover:bg-green-300  py-1 px-1 h-10'
-            onClick={createPost}>
-            {' '}
-            create post{' '}
-          </button>
-        </div>
+      <div className=' text-center font-bold  text-3xl text-white'>D&D Share</div>
+      <div className=' flex flex-row  gap-3 justify-center '>
+        {posts.map((post) => (
+          <div
+            key={post.id}
+            className='Card text-center text-white border-2 border-sky-300 shadow-md shadow-sky-300 hover:border-green-300 hover:shadow-green-300 py-2 px-2'>
+            <p>
+              <a className=' font-semibold'>Name:</a>
+              {'   '}
+              {post.charName}
+            </p>
+            <p>
+              <a className=' font-semibold'>Race:</a>
+              {'   '}
+              {post.race}
+            </p>
+            <p>
+              <a className=' font-semibold'>strength:</a>
+              {'   '}
+              {post.strength}
+            </p>
+            <p>
+              <a className=' font-semibold'>dexterity:</a>
+              {'   '}
+              {post.dexterity}
+            </p>
+            <p>
+              <a className=' font-semibold'>constitution:</a>
+              {'   '}
+              {post.constitution}
+            </p>
+            <p>
+              <a className=' font-semibold'>wisdom:</a>
+              {'   '}
+              {post.wisdom}
+            </p>
+            <p>
+              <a className=' font-semibold'>charisma:</a>
+              {'   '}
+              {post.charisma}
+            </p>
+          </div>
+        ))}
       </div>
-      {posts.map((post) => (
-        <div
-          key={post.id}
-          className=' text-center'>
-          <h1 className=' text-white  text-2xl font-bold'> {post.title} </h1>
-          <p className=' text-md text-white'> {post.content} </p>
-        </div>
-      ))}
     </div>
   );
 }
