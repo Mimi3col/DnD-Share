@@ -29,6 +29,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
 ![gif one](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzAxMDEyMzdkYTAzOGU0OWFjMzhmODQzMjQ3MjA5NTI2YmM1MDYzYyZjdD1n/xd8sjF7tA9WxnA4yzA/giphy.gif)
 
 ![gif two](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM5YjhiYTJmMTYyN2M2YjUwZDkxOTc4ZTVlYmIzYzJkYmY5MThkOSZjdD1n/qvD8BCfbgEV2686C9K/giphy.gif)
