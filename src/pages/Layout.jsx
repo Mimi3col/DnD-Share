@@ -17,6 +17,12 @@ const Layout = () => {
           className='rounded-lg bg-sky-300 text-slate-900 hover:bg-green-300  py-1 px-1 h-10'>
           Create Player
         </a>
+        {'   '}
+        <a
+          href='/Update'
+          className='rounded-lg bg-sky-300 text-slate-900 hover:bg-green-300  py-1 px-1 h-10'>
+          Update Player
+        </a>
       </nav>
       <Outlet />
     </div>

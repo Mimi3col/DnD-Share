@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout';
 import { CreatePlayer } from './pages/CreatePlayer';
+import { Update } from './pages/Update';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,14 @@ root.render(
           <Route
             index={true}
             element={<CreatePlayer />}
+          />
+        </Route>
+        <Route
+          path='/Update'
+          element={<Layout />}>
+          <Route
+            index={true}
+            element={<Update />}
           />
         </Route>
       </Routes>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from './client';
 import './App.css';
+import { Update } from './pages/Update';
 
 function App() {
   const [posts, setPosts] = useState([]); 
@@ -40,6 +41,20 @@ async function fetchPosts(){
 //   fetchPosts()
 // }
 
+async function deletePost(id){
+
+const { data} = await supabase
+.from('posts')
+.delete() 
+.eq('id', id )
+console.log('the id was:', id)
+fetchPosts()
+}
+
+
+
+
+
 
 
 
@@ -51,6 +66,7 @@ async function fetchPosts(){
           <div
             key={post.id}
             className='Card text-center text-white border-2 border-sky-300 shadow-md shadow-sky-300 hover:border-green-300 hover:shadow-green-300 py-2 px-2'>
+            <p> Id Num: {post.id}</p>
             <p>
               <a className=' font-semibold'>Name:</a>
               {'   '}
@@ -86,6 +102,22 @@ async function fetchPosts(){
               {'   '}
               {post.charisma}
             </p>
+            <div className='  '>
+            <button
+              className='rounded-lg bg-sky-300 text-slate-900 hover:bg-green-300  py-1 px-1'
+              onClick={(e) => deletePost(post.id)}>
+              {' '}
+              Delete{' '}
+            </button>
+            {'   '}
+            <a
+              href='/Update'
+              className='rounded-lg bg-sky-300 text-slate-900 hover:bg-green-300  py-1 px-1 '
+              >
+              {' '}
+              Update{' '}
+            </a>
+            </div>
           </div>
         ))}
       </div>

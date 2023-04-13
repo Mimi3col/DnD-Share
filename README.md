@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Web Development Project 7 - *D&D Share*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Submitted by: **Amanda Coleman**
 
-## Available Scripts
+This web app: **Allows the user to keep track of the Players ability Score**
 
-In the project directory, you can run:
+Time spent: **X** hours spent in total
 
-### `npm start`
+## Required Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The following **required** functionality is completed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [x] **A create form allows users to add new cremates** ✅ 2023-04-13
+- [x] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values** ✅ 2023-04-13
+- [x] **The site displays a summary page of all the user's added crewmates** ✅ 2023-04-13
+- [x] **A previously created crewmate can be updated and deleted from the crewmate list** ✅ 2023-04-13
+- [x] **Each crewmate has a direct, unique link to an info page about them** ✅ 2023-04-13
 
-### `npm test`
+The following **optional** features are implemented:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] A crewmate can be given a category upon creation which restricts their attributes
+- [ ] The site displays summary statistics about a user's crew on their crew page 
+- [ ] The site displays a custom "success" metric about a user's crew which changes the look of the crewmate list
 
-### `npm run build`
+The following **additional** features are implemented:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [ ] List anything else that you added to improve the site's functionality!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Video Walkthrough
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Here's a walkthrough of implemented user stories:
+![gif one](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzAxMDEyMzdkYTAzOGU0OWFjMzhmODQzMjQ3MjA5NTI2YmM1MDYzYyZjdD1n/xd8sjF7tA9WxnA4yzA/giphy.gif)
 
-### `npm run eject`
+![gif two](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmM5YjhiYTJmMTYyN2M2YjUwZDkxOTc4ZTVlYmIzYzJkYmY5MThkOSZjdD1n/qvD8BCfbgEV2686C9K/giphy.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![gif three](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2IyNzk1NjY3ZTc2ZGVkYjkyNmM4NjA1MTUxYWZjZWJjMjY2MzNhMiZjdD1n/mSXo1JqRgpMKy11Mg2/giphy.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Describe any challenges encountered while building the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The portion that took the longest was the styling, setting up supabase was very straight forward after I looked into in a little. Once I have the database set up then I worked on inputting the correct information, which also took a large amount of time due to some small errors in syntax that I had. Currently the only portion that is lacking is the update feature. I want to have the current information stored at that id to be displayed in the text boxes, allowing the user to see that they are changing the correct value, but was unable to get it working at this time. 
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Copyright [2023] [Amanda]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-### Code Splitting
+        http://www.apache.org/licenses/LICENSE-2.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
